@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color :white;
+    background-color :gray;
 	color :black ;
 	font-family: Comic Sans MS, Arial, sans-serif; 
 }
@@ -33,7 +33,7 @@ margin: 30px auto;
 }
 .Contact {
 	color:tomato;
-	font-size: 30px;
+	font-size: 20px;
 	margin: 20px;
 } 
 .sect-left{
@@ -44,12 +44,12 @@ margin: 30px auto;
 
 .sec-right  {
 	color:tomato;
-	font-size: 30px;
+	font-size: 20px;
 	margin: 20px;
 }
 .head-section {
 	color:tomato;
-	font-size: 30px;
+	font-size: 20px;
 	margin: 20px;
 }
 .fa-calendar-alt {
