@@ -1,0 +1,81 @@
+h1{
+    font-size: 30px;
+}
+    body{
+        background-color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+    }
+    
+    form {
+        background-color:#FAFAFA;
+       
+        margin:30px 50px 30px 30px ;  
+    
+    }
+        
+    
+    input[type=text] {
+        width: 50%;
+        padding: 10px;
+       
+      }
+      
+    input[type=button] {
+    
+        cursor: pointer;
+    }
+    #error{
+        color: white;
+        font-size: 20px;
+        border: 1px solid black; 
+        background-color:palevioletred;
+        padding : 5px;
+       /* display : none;*/
+    }
+    
+    #resultat{
+      color: white;
+        font-size: 20px;
+        border: 1px solid black; 
+        background-color:green;
+        padding : 5px;
+        /*display : none;*/
+    }
+    
+    
+    #Nom {
+        margin-left : 185px;
+        }
+    
+    #Prénom {
+        margin-left : 145px;
+    }
+    
+    #Adresse {
+        margin-left : 140px;
+    }
+    
+   
+    #Mail {
+        margin-left: 195px;
+    }
+    
+    #valider {
+         margin-left: 255px;
+    
+    }
+    #Date {
+        width: 50%;
+        padding: 10px;
+        margin-left: 0px;
+    }
+
+
+      .invisible {
+        display: none;
+    }
+    
+    .visible {
+        display: block;
+    }

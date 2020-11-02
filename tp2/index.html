@@ -1,33 +1,56 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
+    <title>TP2</title>
+   <h1> Saisaie d'une fiche "personne"</h1>
+</head>
+
+  <body>
+      
+      <form >
+       
+         <label for="Nom"> Nom </label>
+         <input type="text" placeholder=" Anissa" maxlength="20" id="Nom"  name="Nom" >
+    
+  
+         <br><br><label for="Prénom"> Prénom </label>
+         <input type="text" placeholder="MELLAHI"  maxlength="20"id="Prénom"  name="Prénom">
+  
+   
+         <br><br><label for="Date de naissance"> Date de naissance </label>
+         <input type="Date" placeholder="JJ/MM/AAAA" id="Date"  name="Date de naissance" >
+  
+   
+         <br><br><label for="Adresse"> Adresse </label>
+        <input type="text"  placeholder="Paris" maxlength="50" id="Adresse"  name="Adresse" >
         
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
-    </head>
-    <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+
+         
+        <br><br><label for="Mail"> Mail </label>
+        <input type="text"  placeholder="ex: aa@mail.fr" maxlength="30" id="Mail" name="Mail" >
+    
+    
+        <br> <br> <input type="button" id="valider" value="valider" onclick="validation()">
+       
+    
+        
+        
+        </form> 
+        
+        <p><div id="error" class="invisible"> Tout les champs sont obligatoire </div> </p>
+   
+   
+   
+       
+   
+          <p><div id="resultat" class="invisible"> Fin inscription   </div> </p>
+         
+      </body>
+
 </html>
