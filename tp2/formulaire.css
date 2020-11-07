@@ -1,0 +1,68 @@
+html{
+    height: 100%;
+}    
+body{
+    background: url(background.jpg) ;
+    background-size: cover;              
+    font-family: "Georgia","Times New Roman", Times, serif, "Helvetica Neue";
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;             
+}
+
+.formBox{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    opacity: 0.95;
+    border: 2px solid transparent;
+    padding: 20px;
+    width: 70%;
+  }
+
+label{
+    width: 100px;
+}
+
+.person{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.btn{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: green;
+    color: white;
+  }
+
+#error{
+    background-color: pink;
+    padding: 5px;
+    border: 1px solid transparent;;
+    color: black;
+    display : none;
+}
+
+#resultat{
+    background-color: green;
+    padding: 5px;
+    border: 1px solid transparent;
+    color: white;
+    display : none;
+}
+
+.display{
+    display : block !important;
+  }
