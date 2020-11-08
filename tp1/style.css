@@ -1,74 +1,191 @@
-
-* {
-	margin:0;
-	padding:0px;
-	box-sizing: border-box;
-}
+/** index.html**/
 
 body{
-    background-color :white;
+    background-color:gray;
+    
 	color :black ;
 	font-family: Comic Sans MS, Arial, sans-serif; 
 }
+
+
 p {
     text-align : justify;
 }
-hr {
-	margin: auto;
-	width: 90%;
-	color:tomato;
-}
-.left {
-	margin: 50px auto;
-	display: flex;
-	justify-content: flex-start;
-	width: 90%;
-	}
-mon-image{
-list-style-image: center;
-height: 10px;
-width: 10px;
-display: block;
-margin: 30px auto;
-}
-.Contact {
-	color:tomato;
-	font-size: 20px;
-	margin: 20px;
-} 
-.sect-left{
-	color:tomato;
-	font-size: 30px;
-	margin: 20px;
+
+h1.titreCv{
+    text-align : center;
 }
 
-.sec-right  {
-	color:tomato;
-	font-size: 20px;
-	margin: 20px;
+.gras {
+    font-weight : bold;
+    padding-left : 10px;
+    padding-top : 20px;
 }
-.head-section {
-	color:tomato;
-	font-size: 20px;
-	margin: 20px;
+
+p.tomatos {
+    font-size: 0.8em;
+    padding-left : 15px;
+    color : rgb(188,122,122);
 }
-.fa-calendar-alt {
-	margin: 0px 10px;
+
+td.info {
+    margin-left : 40px;
+   
+   
+    color: black;
+   
+   
 }
-footer {
-	margin-top: 60px; 
-	width: 100%;
-	height: 100%;
-	background-color: #009688;
-	text-align: center;
-	padding: 0px 0px;
-	color: white;
-	font-weight: bold;
-	line-height: 2;
-	float: left;
+
+#test {
+     display: flex;
+     margin-bottom: 20px;
+     
 }
-footer a {
-	color: white;
-	text-decoration: none;
-	font-size: 1.2vw;
+
+a.tomatos {
+    color: rgb(188,122,122);
+    text-decoration:none; 
 }
+
+a.noir {
+    color: black;
+    text-decoration:none; 
+}
+
+a.white:hover {
+    color:white ;
+
+}
+
+a.black:hover {
+    color: black ;
+}
+
+
+img.profil {
+   height: 220px;
+    width: 220px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    border-radius: 100px;
+    box-shadow: 0px 2px 5px #1c1a19;
+}
+
+
+img.petit {
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    margin-bottom: -2px;
+}
+
+
+td.interet {
+    font-weight : bold;
+    padding-left : 70px;
+}
+
+
+#right {
+    margin-right : 90px;
+    flex: 2;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 10px;
+    padding: 10px;
+   
+    color: black;
+    font-size: 0.9em;
+}
+
+#left {
+    margin-left: 90px;
+    margin-right: 40px;
+    flex: 1.4;
+}
+
+#corps {
+	background-color :rgb(188,122,122);
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#right h1 {
+    box-shadow: 0px 2px 5px #1c1a19;
+    background-color: rgb(188,122,122);
+    text-align: center;
+    border-radius: 10px;
+}
+
+/** Comp�tences.html **/
+/** Formation.html**/
+/** experiences.html **/
+
+#corp {
+	background-color :white;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+h1.milieu {
+    box-shadow: 0px 2px 5px #1c1a19;
+    background-color:rosybrown;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 270px;
+    margin-right: 270px;
+}
+
+
+#reseau{
+font-size: 15px;
+
+}
+#informatique{
+font-size: 15px;
+}
+#Logiciels{
+    font-size: 15px;
+}
+
+#reseau h1 {
+    box-shadow: 0px 2px 5px #1c1a19;
+    background-color:rgb(188,122,122);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#informatique h1 {
+    box-shadow: 0px 2px 5px #1c1a19;
+    background-color:rgb(188,122,122);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#Logiciels h1{
+    box-shadow: 0px 2px 5px #1c1a19;
+    background-color:rgb(188,122,122);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;  
+}
+
+
+
+
+
+/** responsif**/
+
+
+
+
