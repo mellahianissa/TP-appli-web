@@ -1,33 +1,158 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP4</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire v3</title>
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
+    
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/form-jquery-validation.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/gps.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container formBox">
+
+        <form id="myForm">
+            <h1 class="text-center">TP4 AW - Formulaire</h1>
+            <h5 class="font-italic text-center" style="color: lightpink;">Html5: GPS, Local Storage </h5>
+            <br>
+
+            <h4>🤵 Ajouter un contact</h4>
+            <br>
+            <div class="row">
+
+                <label for="lastname" class="col-sm-2 col-form-label">Nom</label>
+
+                <div class="col-sm-9">
+                    <input type="text" id="lastname" name="lastname" placeholder="ex: Smith" minlength="5"
+                        maxlength="20" class="form-control person" />
+                </div>
+                <div class="col-sm-1" id="lastnm_counter">
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="firstname" class="col-sm-2 col-form-label">Prénom</label>
+
+                <div class="col-sm-9">
+                    <input type="text" id="firstname" name="firstname" placeholder="ex: Marie" minlength="5"
+                        maxlength="20" class="form-control person" />
+                </div>
+                <div class="col-sm-1" id="firstnm_counter">
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="date" class="col-sm-2 col-form-label">Date de naissance</label>
+
+                <div class="col-sm-9">
+                    <input type="date" id="date" name="date" placeholder="ex: 01/10/2000" class="form-control person" />
+                </div>
+                <div class="col-sm-1">
+                </div>
+            </div>
+
+            <div class="row">
+
+                <label for="address" class="col-sm-2 col-form-label">Adresse</label>
+
+                <div class="col-sm-9 input-group mb-3">
+                    <input type="text" id="address" name="address" placeholder="ex: Paris" minlength="5" maxlength="50"
+                        class="form-control person" />
+
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="gps" onclick="getLocation()">
+                            📍
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-9" id="map">
+                </div>
+
+                <div class="col-sm-1">
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+
+                <label for="mail" class="col-sm-2 col-form-label">Mail</label>
+
+                <div class="col-sm-9">
+                    <input type="email" id="mail" name="mail" placeholder="ex: xxx@mail.com" minlength="5"
+                        maxlength="30" class="form-control person" />
+                </div>
+                <div class="col-sm-1">
+
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+            <div class="row">
+                <div class="col-sm-9"></div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary" id="subbutton">Valider</button>
+                </div>
+            </div>
+
+        </form>
+
+        <hr>
+        <h4>📇 Liste des contacts</h4>
+        <br>
+        <table class="table table-striped table-hover" id="tableContacts">
+
+
+
+
+        </table>
+
+
+
         
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>TP4</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
