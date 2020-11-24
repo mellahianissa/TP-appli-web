@@ -7,6 +7,7 @@ $(document).ready(function () {
         maxDate: "today"
     });
 
+    //realtime counter on Lastname
     $("#lastname").keyup(function () {
         var len = $(this).val().length;
         var count = len + " Car."
@@ -14,6 +15,7 @@ $(document).ready(function () {
 
     });
 
+    //realtime counter on Firstname
     $("#firstname").keyup(function () {
         var len = $(this).val().length;
         var count = len + " Car."
@@ -47,10 +49,12 @@ $(document).ready(function () {
             }
         }
 
+        //Vérifier si tous les champs sont remplis avant d'enregister un contact
         if (test == 0) {
             contactStore.add($("#lastname").val(), $("#firstname").val(), $("#date").val(), $("#address").val(), $("#mail").val());
         }
 
+        //Rénitialiser le tableau avant chaque affichage
         $("#tableContacts").html("");
         $("#tableContacts").append(
             "<thead>" +
@@ -66,6 +70,8 @@ $(document).ready(function () {
             " </tbody>"
 
         );
+
+        //Affichage de la liste des contacts
         for (var i in contactStore.getList()) {
             $("#tableContacts tbody").append(
                 "<tr>" +
