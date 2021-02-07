@@ -52,6 +52,7 @@ TP du jour
 
 * Créer un compte openweathermap sur https://openweathermap.org/appid et     récupérer votre API Key (onglet ```API Keys```) : https://home.openweathermap.org/api_keys 
     * Exemple de clé (Api Key/appid): 0ada432b59deb9716c357092c5f79be6
+                                    f1b56c793d447b5d4923b09803868a82
     * Exemple de réponse à l’API: https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=0ada432b59deb9716c357092c5f79be6
 
     * Analyser la structure de la réponse JSON https://openweathermap.org/current#current_JSON
