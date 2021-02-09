@@ -1,110 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
-    <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
+    <title>Formulaire v2</title>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
 
-<!-- CSS boostrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
 
-<script src="js/popper.min.js"></script>
-
-<!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/form-jquery-validation.js"></script>
-
+    <script src="js/form-jquery-validation.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body style="background-color:rosybrown ;"  >
 
-    <div class="container" >
-     <h1 style="color: black;">Formulaire</h1>
-     
-      <form id="monFormulaire" method="post" action="#">
-       
-     
-      <div class="form-group row ">
-       
-            <label for="nom" class="col-sm-2 col-form-label">Nom</label>
-            <div class="col-sm-10">
-           
-            <input type="text" class="form-control" placeholder="Entrer votre nom" id="nom">
-          </div>
-        </div>
-        
-          <div class="form-group row">
-            <label for="prénom" class="col-sm-2 col-form-label">Prénom</label>
-            <div class="col-sm-10">
-           
-            <input type="text" class="form-control" placeholder="Entrer votre prénom" id="prénom" >
-          </div>
-        </div>
-          <div class="form-group row ">
-            
-            
-            <label for="date" class="col-sm-2 col-form-label"  >Date de naissance </label>
-            <div class="col-sm-10">
-            <input type="date" class="form-control" placeholder="JJ/MM/AAAA" id="date">
-          
-          </div> 
-          </div>
-          
+<body>
+    <div class="container formBox">
+        <form id="myForm">
+            <h1 class="text-center">TP AW - Formulaire</h1>
+            <h5 class="font-italic text-center">Avec Bootstrap et jQuery</h5>
+            <br>
+            <br>
+            <div class="row">
 
+                <label for="lastname" class="col-sm-3 col-form-label">Nom</label>
 
-
-
-          <div class="form-group row ">
-            <label for="adresse" class="col-sm-2 col-form-label">Adresse</label>
-            <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="25 rue république " id="adresse" >
-                    
+                <div class="col-sm-9">
+                    <input type="text" id="lastname" name="lastname" placeholder="ex: Smith" minlength="5"
+                        maxlength="20" class="form-control person" />
+                </div>
             </div>
-     
-      </div>
-        
-        
-          <div class="form-group  row">
-            <label for="mail" class="col-sm-2 col-form-label">Mail</label>
-            <div class="col-sm-10">
-            
-            <input type="mail" class="form-control" placeholder="fffff@ffff" id="mail" >
-          </div>
-        </div>
+            <br>
+            <div class="row">
+                <label for="firstname" class="col-sm-3 col-form-label">Prénom</label>
+
+                <div class="col-sm-9">
+                    <input type="text" id="firstname" name="firstname" placeholder="ex: Marie" minlength="5"
+                        maxlength="20" class="form-control person" />
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="date" class="col-sm-3 col-form-label">Date de naissance</label>
+
+                <div class="col-sm-9">
+                    <input type="date" id="date" name="date" placeholder="ex: 01/10/2000" class="form-control person" />
+                </div>
+            </div>
+            <br>
+            <div class="row">
+
+                <label for="address" class="col-sm-3 col-form-label">Adresse</label>
+
+                <div class="col-sm-9">
+                    <input type="text" id="address" name="address" placeholder="ex: Paris" minlength="5" maxlength="50"
+                        class="form-control person" />
+                </div>
+            </div>
+            <br>
+            <div class="row">
+
+                <label for="mail" class="col-sm-3 col-form-label">Mail</label>
+
+                <div class="col-sm-9">
+                    <input type="email" id="mail" name="mail" placeholder="ex: xxx@mail.com" minlength="5"
+                        maxlength="30" class="form-control person" />
+                </div>
+            </div>
+            <br>
+            <br>
 
 
-     
-            
-          <input type="button" value="Valider" id="valider" class="btn btn-primary">
-          
-         
-        
-        
+            <div class="row">
+                <div class="col-sm-9"></div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary" id="subbutton">Valider</button>
+                </div>
+            </div>
+
         </form>
-      
-</div> 
-
-<div class="modal" tabindex="-1" role="dialog" id="myModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <p>Votre formulaire n'est pas complet </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
     </div>
-  </div>
-</div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
