@@ -1,0 +1,25 @@
+html{
+    height: 100%;
+} 
+body{
+    background: url(../cherryblo.jpg) ;
+    background-size: cover; 
+    height: 100%; 
+    font-family: "Georgia","Times New Roman", Times, serif, "Helvetica Neue";
+}
+.modal-body img{
+    max-width: 100%;
+}
+.formBox{
+    border-radius: 5px;
+    background-color: aliceblue;
+    opacity: 0.85;
+    border: 2px solid transparent;
+    padding: 20px;
+    width: 70%;
+    /*margin-left: 0;
+    height: -webkit-fill-available;*/
+  }
+#date{
+    background-color: white !important;
+}
