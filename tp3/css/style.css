@@ -1,0 +1,24 @@
+html{
+    height: 100%;
+} 
+body{
+    background: url(../backgroundv2.jpg) ;
+    background-size: cover; 
+    height: 100%; 
+}
+.modal-body img{
+    max-width: 100%;
+}
+.formBox{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    opacity: 0.9;
+    border: 2px solid transparent;
+    padding: 20px;
+    width: 60%;
+    margin-right: 0;
+    height: -webkit-fill-available;
+  }
+#date{
+    background-color: white !important;
+}
