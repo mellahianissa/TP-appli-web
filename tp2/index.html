@@ -1,56 +1,58 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="index.js"></script>
+<!doctype html>
+<html>
 
-    <title>TP2</title>
-   <h1> Saisaie d'une fiche "personne"</h1>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Formulaire</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="formulaire.css">
+    <script src="formulaire.js"></script>
+
 </head>
 
-  <body>
-      
-      <form >
-       
-         <label for="Nom"> Nom </label>
-         <input type="text" placeholder=" Anissa" maxlength="20" id="Nom"  name="Nom" >
-    
-  
-         <br><br><label for="Prénom"> Prénom </label>
-         <input type="text" placeholder="MELLAHI"  maxlength="20"id="Prénom"  name="Prénom">
-  
-   
-         <br><br><label for="Date de naissance"> Date de naissance </label>
-         <input type="Date" placeholder="JJ/MM/AAAA" id="Date"  name="Date de naissance" >
-  
-   
-         <br><br><label for="Adresse"> Adresse </label>
-        <input type="text"  placeholder="Paris" maxlength="50" id="Adresse"  name="Adresse" >
-        
+<body>
+    <div class="formBox">
+        <h1 style="text-align: center">Saisie d'une fiche "Personne"</h1>
+        <form id="tpForm" onsubmit="validation()">
 
-         
-        <br><br><label for="Mail"> Mail </label>
-        <input type="text"  placeholder="ex: aa@mail.fr" maxlength="30" id="Mail" name="Mail" >
-    
-    
-        <br> <br> <input type="button" id="valider" value="valider" onclick="validation()">
-       
-    
-        
-        
-        </form> 
-        
-        <p><div id="error" class="invisible"> Tout les champs sont obligatoire </div> </p>
-   
-   
-   
-       
-   
-          <p><div id="resultat" class="invisible"> Fin inscription   </div> </p>
-         
-      </body>
+            <label for="lastname">Nom</label>
+            <input type="text" id="lastname" name="lastname" placeholder="ex: Smith" minlength="5" maxlength="20"
+                class="person" />
+            <br />
+
+            <label for="firstname">Prénom</label>
+            <input type="text" id="firstname" name="firstname" placeholder="ex: Marie" minlength="5" maxlength="20"
+                class="person" />
+            <br />
+
+            <label for="date">Date de naissance</label>
+            <input type="date" id="date" name="date" placeholder="ex: 01/10/2000" class="person" />
+            <br />
+
+            <label for="address">Adresse</label>
+            <input type="text" id="address" name="address" placeholder="ex: Paris" minlength="5" maxlength="50"
+                class="person" />
+            <br />
+
+            <label for="mail">Mail</label>
+            <input type="email" id="mail" name="mail" placeholder="ex: xxx@mail.com" minlength="5" maxlength="30"
+                class="person" />
+            <br />
+
+            <p>
+                <input type="button" value="Valider" onclick="validation()" class="btn" />
+            </p>
+
+        </form>
+
+        <div id="error"></div>
+        <div id="resultat"></div>
+    </div>
+</body>
 
 </html>
